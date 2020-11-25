@@ -14,7 +14,7 @@
 
 Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to [@yarus](https://github.com/yarus-app)/[ZenKit](https://github.com/yarus-app/zenkit).
 
-### [Good First Issues]((https://github.com/yarus-app/zenkit/labels/good%20first%20issue)
+### [Good First Issues](https://github.com/yarus-app/zenkit/labels/good%20first%20issue)
 
 To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/yarus-app/zenkit/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started.
 
