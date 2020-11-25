@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "description": "// TODO: write description",
+  "license": "MIT",
+  "repository": "github:yarus-app/zenkit",
+  "author": "Yaroslav Usenko <usenko.jaroslav@gmail.com> (https://usenko.pp.ua)",
+  "homepage": "https://github.com/yarus-app/zenkit",
+  "bugs": "https://github.com/yarus-app/zenkit/issues",
+  "keywords": [],
+  "scripts": {
+    "postinstall": "lerna bootstrap"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
