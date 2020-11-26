@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.2.1...@zenkit/box@2.3.0) (2020-11-26)
+
+### Features
+
+-   **box:** added relative position ([f6d291c](https://github.com/yarus-app/zenkit/commit/f6d291cc177aa4776e9939471ddc57f56bd73b49))
+
 ## [2.2.1](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.2.0...@zenkit/box@2.2.1) (2020-11-26)
 
 ### Bug Fixes
