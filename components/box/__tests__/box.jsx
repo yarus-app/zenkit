@@ -1,7 +1,7 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { shallow } from 'enzyme';
+// eslint-disable-next-line import/no-unresolved
 import { Box } from '@zenkit/box';
 
 describe('<Box />', () => {
