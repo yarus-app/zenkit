@@ -3,14 +3,18 @@
   "version": "2.0.0",
   "main": "lib/zenkit-box.js",
   "module": "lib/zenkit-box.mjs",
+  "modules.root": "lib",
   "files": [
     "lib"
   ],
-  "peerDependencies": {
-    "styled-components": "^5.2.1"
-  },
   "devDependencies": {
+    "react": "16",
+    "react-dom": "16",
     "styled-components": "^5.2.1"
   },
-  "modules.root": "lib"
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "styled-components": "^5.2.1"
+  }
 }

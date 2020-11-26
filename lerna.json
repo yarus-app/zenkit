@@ -5,12 +5,13 @@
   "parallel": true,
   "hoist": true,
   "npmClientArgs": ["--no-package-lock"],
+  "ignoreChanges": ["**/lib/**", "**/fixtures/**", "**/test/**", "**/*.md"],
   "command": {
     "version": {
-      "allowBranch": "main"
-    },
-    "publish": {
-      "conventionalCommits": true
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "exact": true,
+      "message": "chore(release): %s"
     }
   }
 }
