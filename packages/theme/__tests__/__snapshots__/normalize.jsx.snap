@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ThemeProvider /> should render correctly 1`] = `
+<Component
+  theme={
+    Object {
+      "breakpoints": Object {
+        "l": 1024,
+        "m": 960,
+        "s": 600,
+        "xl": 1280,
+        "xs": 320,
+        "xxl": 1920,
+        "xxs": 0,
+      },
+      "palette": Object {
+        "background": Object {
+          "default": "#fafafa",
+          "paper": "#fff",
+        },
+        "common": Object {
+          "blue": "rgb(  0, 122, 255)",
+          "brown": "rgb(162, 162, 162)",
+          "gray": "rgb(162, 162, 162)",
+          "green": "rgb(162, 162, 162)",
+          "indigo": "rgb(162, 162, 162)",
+          "orange": "rgb(162, 162, 162)",
+          "pink": "rgb(162, 162, 162)",
+          "purple": "rgb(175,  82, 222)",
+          "red": "rgb(255,  59,  48)",
+          "teal": "rgb( 90, 200, 250)",
+          "yellow": "rgb(255, 204,   0)",
+        },
+        "text": Object {
+          "disabled": "rgba(000, 000, 000, 0.87)",
+          "hint": "rgba(000, 000, 000, 0.87)",
+          "primary": "rgba(000, 000, 000, 0.87)",
+          "secondary": "rgba(000, 000, 000, 0.87)",
+        },
+      },
+    }
+  }
+>
+  <Component />
+</Component>
+`;
