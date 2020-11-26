@@ -7,7 +7,7 @@
   "homepage": "https://github.com/yarus-app/zenkit",
   "bugs": "https://github.com/yarus-app/zenkit/issues",
   "scripts": {
-    "postinstall": "husky install && lerna bootstrap",
+    "postinstall": "lerna bootstrap",
     "clean:pkgs": "lerna run clean",
     "clean:lerna": "lerna clean",
     "clean": "run-s clean:**",
@@ -18,7 +18,7 @@
     "format": "run-s format:**",
     "lint:styles": "stylelint {components,packages}/**/{src,test}/**/*.{js,jsx,mjs} --ignore-path .gitignore",
     "lint:code": "eslint . --ext .js,.jsx,.mjs --ignore-path .gitignore",
-    "lint": "run-s lint:**",
+    "lint": "run-s lint:**"
   },
   "keywords": [],
   "dependencies": {
@@ -65,7 +65,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.0.0",
     "eslint-plugin-unicorn": "^23.0.0",
-    "husky": "^5.0.4",
+    "husky": "^4.3.0",
     "imagemin-lint-staged": "^0.4.0",
     "jest": "^26.6.3",
     "lerna": "^3.22.1",
