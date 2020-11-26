@@ -16,7 +16,7 @@
     "format:styles": "npm run lint:styles -- --fix",
     "format:code": "npm run lint:code -- --fix",
     "format": "run-s format:**",
-    "lint:styles": "stylelint {components,packages}/**/{src,test}/**/*.{js,jsx,mjs} --ignore-path .gitignore",
+    "lint:styles": "stylelint {components,packages}/**/{src,__tests__}/**/*.{js,jsx,mjs} --ignore-path .gitignore",
     "lint:code": "eslint . --ext .js,.jsx,.mjs --ignore-path .gitignore",
     "lint": "run-s lint:**",
     "test": "cross-env NODE_ENV=test jest",
@@ -153,6 +153,9 @@
       "es6": true,
       "browser": true,
       "node": true
+    },
+    "rules": {
+      "react/prop-types": 0
     }
   },
   "prettier": {},
