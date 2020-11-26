@@ -1,6 +1,6 @@
 {
   "name": "@zenkit/box",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "lib/zenkit-box.js",
   "module": "lib/zenkit-box.mjs",
   "modules.root": "lib",
