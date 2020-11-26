@@ -1,6 +1,12 @@
 {
   "name": "@zenkit/box",
   "version": "2.0.2",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/yarus-app/zenkit/tree/main/components/box",
+  "bugs": "https://github.com/yarus-app/zenkit/labels/component%3Abox",
+  "license": "MIT",
+  "author": "Yaroslav Usenko <usenko.jaroslav@gmail.com> (https://usenko.pp.ua)",
   "main": "lib/zenkit-box.js",
   "module": "lib/zenkit-box.mjs",
   "modules.root": "lib",
@@ -16,5 +22,8 @@
     "react": "16",
     "react-dom": "16",
     "styled-components": "^5.2.1"
+  },
+  "publicConfig": {
+    "access": "public"
   }
 }
