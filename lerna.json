@@ -1,9 +1,6 @@
 {
   "version": "independent",
-  "packages": [
-    "components/*",
-    "packages/*"
-  ],
+  "packages": ["components/*", "packages/*"],
   "stream": true,
   "parallel": true,
   "hoist": true,

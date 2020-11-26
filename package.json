@@ -6,12 +6,26 @@
   "author": "Yaroslav Usenko <usenko.jaroslav@gmail.com> (https://usenko.pp.ua)",
   "homepage": "https://github.com/yarus-app/zenkit",
   "bugs": "https://github.com/yarus-app/zenkit/issues",
-  "keywords": [],
   "scripts": {
-    "postinstall": "lerna bootstrap",
-    "build": "lerna exec \"rollup --config=../../scripts/build/rollup.config.js\""
+    "postinstall": "husky install && lerna bootstrap",
+    "clean:pkgs": "lerna run clean",
+    "clean:lerna": "lerna clean",
+    "clean": "run-s clean:**",
+    "build": "lerna exec \"rollup --config=../../scripts/build/rollup.config.js\"",
+    "format:files": "prettier **/* --write --ignore-unknown --ignore-path .gitignore",
+    "format:styles": "npm run lint:styles -- --fix",
+    "format:code": "npm run lint:code -- --fix",
+    "format": "run-s format:**",
+    "lint:styles": "stylelint {components,packages}/**/{src,test}/**/*.{js,jsx,mjs} --ignore-path .gitignore",
+    "lint:code": "eslint . --ext .js,.jsx,.mjs --ignore-path .gitignore",
+    "lint": "run-s lint:**",
   },
-  "dependencies": {},
+  "keywords": [],
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -42,10 +56,88 @@
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-react-persist": "^0.2.0",
     "babel-plugin-transform-hoist-nested-functions": "^1.2.0",
-    "faster.js": "^1.1.1",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-unicorn": "^23.0.0",
+    "husky": "^5.0.4",
+    "imagemin-lint-staged": "^0.4.0",
+    "jest": "^26.6.3",
     "lerna": "^3.22.1",
+    "lint-staged": "^10.5.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.2.0",
     "rollup": "^2.33.3",
     "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "airbnb/hooks",
+      "airbnb/whitespace",
+      "plugin:prettier/recommended",
+      "plugin:unicorn/recommended",
+      "prettier",
+      "prettier/babel",
+      "prettier/react",
+      "prettier/unicorn"
+    ],
+    "plugins": [
+      "prettier",
+      "unicorn"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    }
+  },
+  "prettier": {},
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-styled-components",
+      "stylelint-config-rational-order",
+      "stylelint-config-prettier"
+    ],
+    "plugins": [
+      "stylelint-prettier"
+    ],
+    "rules": {
+      "prettier/prettier": true
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs}": [
+      "stylelint --fix",
+      "eslint --fix"
+    ],
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged"
+    ],
+    "*.{md,mdx,json}": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

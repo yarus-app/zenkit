@@ -10,7 +10,7 @@
 
 <!-- TODO: Write Getting started -->
 
-##  [Contributing](CONTRIBUTING.md)
+## [Contributing](CONTRIBUTING.md)
 
 Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to [@yarus](https://github.com/yarus-app)/[ZenKit](https://github.com/yarus-app/zenkit).
 
