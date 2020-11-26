@@ -9,9 +9,9 @@
   "command": {
     "version": {
       "allowBranch": "main",
-      "amend": true,
       "conventionalCommits": true,
       "createRelease": "github",
+      "message": "chore: publish release",
       "exact": true,
       "signGitCommit": true,
       "signGitTag": true
