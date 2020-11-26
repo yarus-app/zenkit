@@ -2,9 +2,9 @@
 
 exports[`<Box /> should render correctly in "debug" mode 1`] = `
 .c0 {
+  position: relative;
   display: block;
   box-sizing: border-box;
-  color: red;
 }
 
 <div
