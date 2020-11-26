@@ -20,7 +20,8 @@
     "lint:code": "eslint . --ext .js,.jsx,.mjs --ignore-path .gitignore",
     "lint": "run-s lint:**",
     "test": "cross-env NODE_ENV=test jest",
-    "coverage": "cross-env NODE_ENV=test jest --coverage"
+    "coverage": "cross-env NODE_ENV=test jest --coverage",
+    "publish": "lerna publish"
   },
   "keywords": [],
   "dependencies": {
