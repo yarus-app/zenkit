@@ -1,0 +1,29 @@
+{
+  "name": "@zenkit/normalize",
+  "version": "2.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/yarus-app/zenkit/tree/main/packages/normalize",
+  "bugs": "https://github.com/yarus-app/zenkit/labels/package%3Anormalize",
+  "license": "MIT",
+  "author": "Yaroslav Usenko <usenko.jaroslav@gmail.com> (https://usenko.pp.ua)",
+  "main": "lib/zenkit-normalize.js",
+  "module": "lib/zenkit-normalize.mjs",
+  "modules.root": "lib",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "styled-components": "^5.2.1"
+  },
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "styled-components": "^5.2.1"
+  },
+  "publicConfig": {
+    "access": "public"
+  }
+}
