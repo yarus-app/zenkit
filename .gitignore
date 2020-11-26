@@ -4,9 +4,11 @@
 # Build Files
 bin
 build
+!scripts/build
 dist
 lib
 public
+!scripts/public
 bundle-stats.json
 
 # Coverage directory used by tools like istanbul
