@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.2.0...@zenkit/box@2.2.1) (2020-11-26)
+
+### Bug Fixes
+
+-   **box:** fix box prop inline ([6aa2d53](https://github.com/yarus-app/zenkit/commit/6aa2d53f1429cfd7024a3ea83f234bcb9afe0811))
+
 # [2.2.0](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.1.0...@zenkit/box@2.2.0) (2020-11-26)
 
 ### Features
