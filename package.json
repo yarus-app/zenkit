@@ -113,7 +113,7 @@
     ],
     "coverageDirectory": "coverage",
     "testMatch": [
-      "**/__tests__/**/*.?(m)js?(x)"
+      "**/tests/**/*.?(m)js?(x)"
     ],
     "moduleNameMapper": {
       "@zenkit/(.*)": [
