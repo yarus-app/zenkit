@@ -155,7 +155,8 @@
       "node": true
     },
     "rules": {
-      "react/prop-types": 0
+      "react/prop-types": 0,
+      "unicorn/prevent-abbreviations": 0
     }
   },
   "prettier": {},

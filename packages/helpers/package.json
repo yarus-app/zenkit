@@ -1,0 +1,29 @@
+{
+  "name": "@zenkit/helpers",
+  "version": "2.1.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/yarus-app/zenkit/tree/main/packages/helpers",
+  "bugs": "https://github.com/yarus-app/zenkit/labels/package%3Ahelpers",
+  "license": "MIT",
+  "author": "Yaroslav Usenko <usenko.jaroslav@gmail.com> (https://usenko.pp.ua)",
+  "main": "lib/zenkit-helpers.js",
+  "module": "lib/zenkit-helpers.mjs",
+  "modules.root": "lib",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "styled-components": "^5.2.1"
+  },
+  "peerDependencies": {
+    "react": "16",
+    "react-dom": "16",
+    "styled-components": "^5.2.1"
+  },
+  "publicConfig": {
+    "access": "public"
+  }
+}
