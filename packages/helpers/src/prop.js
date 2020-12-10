@@ -10,7 +10,7 @@ export const prop = (path, defaultValue) => (properties = {}) => {
     let object = properties[paths[0]];
     let index = 1;
 
-    while (object != undefined && index < length) {
+    while (object !== undefined && index < length) {
       object = object[paths[index]];
       index += 1;
     }
@@ -22,5 +22,3 @@ export const prop = (path, defaultValue) => (properties = {}) => {
 
   return defaultValue;
 };
-
-export default prop;

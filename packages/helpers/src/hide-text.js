@@ -3,5 +3,3 @@ export const hideText = () => ({
   overflow: 'hidden',
   whiteSpace: 'nowrap',
 });
-
-export default hideText;

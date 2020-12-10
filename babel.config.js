@@ -17,6 +17,9 @@ module.exports = (api) => {
         '@babel/preset-env',
         {
           modules: isJest ? 'cjs' : false,
+          corejs: 3,
+          useBuiltIns: 'usage',
+          spec: false,
           loose: true,
           exclude: [
             'transform-async-to-generator',
@@ -26,8 +29,27 @@ module.exports = (api) => {
         },
       ],
       ['@babel/preset-react', {}],
+      [
+        'babel-preset-minify',
+        {
+          keepFnName: false,
+          keepClassName: false,
+          removeConsole: false,
+          removeDebugger: true,
+        },
+      ],
     ],
     plugins: [
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          absoluteRuntime: false,
+          corejs: 3,
+          helpers: true,
+          regenerator: true,
+          useESModules: !isJest,
+        },
+      ],
       // Stage 0
       '@babel/plugin-proposal-function-bind',
 
@@ -72,8 +94,11 @@ module.exports = (api) => {
       ['babel-plugin-jsx-control-statements', {}],
 
       ['@babel/plugin-transform-react-inline-elements', {}],
+      'babel-plugin-transform-react-class-to-function',
+      '@babel/plugin-transform-react-constant-elements',
 
       ['babel-plugin-react-persist', {}],
+      'babel-plugin-loop-optimizer',
     ],
   };
 };

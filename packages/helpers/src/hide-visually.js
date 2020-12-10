@@ -9,5 +9,3 @@ export const hideVisually = () => ({
   whiteSpace: 'nowrap',
   width: '1px',
 });
-
-export default hideVisually;

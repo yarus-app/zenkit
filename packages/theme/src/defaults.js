@@ -1,3 +1,13 @@
+export const breakpoints = {
+  xxs: 0,
+  xs: 320,
+  s: 600,
+  m: 960,
+  l: 1024,
+  xl: 1280,
+  xxl: 1920,
+};
+
 export const palette = {
   common: {
     blue: 'rgb(  0, 122, 255)',
@@ -24,4 +34,7 @@ export const palette = {
   },
 };
 
-export default palette;
+export const theme = () => ({
+  palette,
+  breakpoints,
+});

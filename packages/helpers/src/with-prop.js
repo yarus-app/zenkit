@@ -12,5 +12,3 @@ export const withProp = (needle, function_) => (properties = {}) => {
   }
   return function_(prop(needle)(properties));
 };
-
-export default withProp;

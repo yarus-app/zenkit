@@ -20,5 +20,3 @@ export const ellipsis = (width, lines = 1) => (props = {}) => {
       }
     : styles;
 };
-
-export default ellipsis;

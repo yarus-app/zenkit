@@ -10,5 +10,3 @@ export const cover = (offset = 0) => (props = {}) => {
     left: normilizedOffcet,
   };
 };
-
-export default cover;

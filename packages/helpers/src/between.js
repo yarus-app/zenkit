@@ -48,5 +48,3 @@ export const between = (fromSize, toSize, minScreen, maxScreen) => (
     100 * slope
   ).toFixed(2)}vw)`;
 };
-
-export default between;

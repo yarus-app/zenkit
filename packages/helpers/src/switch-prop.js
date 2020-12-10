@@ -13,5 +13,3 @@ export const switchProp = (needle, cases, defaultCase) => (properties = {}) => {
   }
   return defaultCase;
 };
-
-export default switchProp;

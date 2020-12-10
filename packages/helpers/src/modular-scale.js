@@ -1,3 +1,4 @@
+import { ZenError } from './utils/error';
 import { getValueAndUnit } from './get-value-and-unit';
 
 export const ratioNames = {
@@ -26,7 +27,7 @@ const getRatio = (ratioName) => {
   }
 
   if (typeof ratio === 'string') {
-    if (!ratioNames[ratio]) {
+    if (!ratioNames[ratioName]) {
       throw new ZenError(43);
     }
 
@@ -47,5 +48,3 @@ export const modularScale = (steps, base = '1em', ratio = 'perfectFourth') => {
 
   return `${realBase * realRatio ** steps}${unit || ''}`;
 };
-
-export default modularScale;

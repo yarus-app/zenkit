@@ -48,5 +48,3 @@ export const ifProp = (test, pass, fail = '') => (props = {}) => {
   const value = result ? pass : fail;
   return typeof value === 'function' ? value(props) : value;
 };
-
-export default ifProp;

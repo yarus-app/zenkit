@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components/macro';
+import { createGlobalStyle, css } from 'styled-components/macro';
 
-export const Normalize = createGlobalStyle`
+const normalizeStyles = css`
   * {
     margin: 0;
     padding: 0;
@@ -17,19 +17,22 @@ export const Normalize = createGlobalStyle`
     outline-width: 0;
     outline-style: solid;
     outline-color: currentColor;
-    outline-offset: .5rem;
+    outline-offset: 0.5rem;
   }
 
-  ::before, ::after {
+  ::before,
+  ::after {
     text-decoration: inherit;
     vertical-align: inherit;
   }
 
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     box-sizing: border-box;
   }
 
-  :root  {
+  :root {
     color: #000;
     font: 100%/1.5 system-ui, sans-serif;
     text-align: left;
@@ -54,4 +57,4 @@ export const Normalize = createGlobalStyle`
   }
 `;
 
-export default Normalize;
+export const Normalize = createGlobalStyle(normalizeStyles);

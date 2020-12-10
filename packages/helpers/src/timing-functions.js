@@ -31,5 +31,3 @@ export const functionsMap = {
 
 export const timingFunctions = (timingFunction) => (props = {}) =>
   theme('timing-functions', functionsMap)(props)[timingFunction];
-
-export default timingFunctions;

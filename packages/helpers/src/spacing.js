@@ -11,5 +11,3 @@ export const spacing = (value) => (props = {}) => {
   }
   return value;
 };
-
-export default spacing;

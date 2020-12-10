@@ -28,6 +28,23 @@ export default async (commandLineArguments) => {
 
   const PKG = await import(path.resolve(PACKAGE_ROOT, 'package.json'));
 
+  const { name, dependencies = {}, peerDependencies = {} } = PKG;
+
+  const external = [
+    ...Object.keys(dependencies),
+    ...Object.keys(peerDependencies),
+  ].map((e) => new RegExp(e.replace('/', '/')));
+
+  const getBanner = ({ extension }) => `
+  /** @license ${name}
+   * ${PACKAGE_TITLE}.${extension}
+   *
+   * Copyright © '2020' 'Yaroslav Usenko'
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */`;
+
   const config = {
     input: {
       [PACKAGE_TITLE]: 'src/index',
@@ -40,10 +57,19 @@ export default async (commandLineArguments) => {
         entryFileNames: '[name].js',
         chunkFileNames: '[name].[hash].js',
         assetFileNames: PABLIC_FILE_NAME,
-        compact: !isDevelopment,
-        esModule: true,
+        banner: getBanner({ extension: 'js' }),
+        interop: false,
+        esModule: false,
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        hoistTransitiveImports: true,
+        compact: true,
         exports: 'named',
         sourcemap: true,
+        extend: false,
+        minifyInternalExports: true,
+        externalLiveBindings: true,
+        preferConst: true,
       },
       {
         name: PACKAGE_NAME,
@@ -52,16 +78,22 @@ export default async (commandLineArguments) => {
         entryFileNames: '[name].mjs',
         chunkFileNames: '[name].[hash].mjs',
         assetFileNames: PABLIC_FILE_NAME,
-        compact: !isDevelopment,
-        esModule: true,
+        banner: getBanner({ extension: 'mjs' }),
+        interop: 'esModule',
+        esModule: false,
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        hoistTransitiveImports: true,
+        compact: true,
         exports: 'named',
         sourcemap: true,
+        extend: false,
+        minifyInternalExports: true,
+        externalLiveBindings: true,
+        preferConst: true,
       },
     ],
-    external: [
-      ...Object.keys(PKG.dependencies || {}),
-      ...Object.keys(PKG.peerDependencies || {}),
-    ],
+
     plugins: [
       !isDevelopment &&
         del({
@@ -81,14 +113,38 @@ export default async (commandLineArguments) => {
       babel({
         extensions,
         rootMode: 'upward',
-        babelHelpers: 'bundled',
+        babelHelpers: 'runtime',
         exclude: /node_modules/,
+        sourceMap: true,
       }),
-      !isDevelopment && terser(),
+      !isDevelopment &&
+        terser({
+          format: {
+            ascii_only: false,
+            beautify: true,
+            braces: false,
+            // comments
+            indent_level: 2,
+            indent_start: 0,
+            inline_script: true,
+            keep_numbers: false,
+            keep_quoted_props: false,
+            max_line_len: 100,
+            // preamble
+            // quote_keys
+            // quote_style
+          },
+          keep_classnames: false,
+          keep_fnames: false,
+          toplevel: true,
+        }),
     ].filter(Boolean),
-    preserveModules: true,
+    external,
+
     preserveSymlinks: true,
     shimMissingExports: true,
+    inlineDynamicImports: false,
+    treeshake: true,
   };
 
   return config;

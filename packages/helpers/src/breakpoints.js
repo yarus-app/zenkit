@@ -79,5 +79,3 @@ export const breakpoint = {
   only,
   between,
 };
-
-export default breakpoint;

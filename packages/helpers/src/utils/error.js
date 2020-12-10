@@ -1,7 +1,5 @@
 export class ZenError extends Error {
-  constructor(code, ...args) {
+  constructor() {
     super(`An error occurred.`);
   }
 }
-
-export default ZenError;

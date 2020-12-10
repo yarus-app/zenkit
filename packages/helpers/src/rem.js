@@ -8,5 +8,3 @@ export const rem = (pxval, base) => (props = {}) => {
 
   return `${value / newBase}rem`;
 };
-
-export default rem;

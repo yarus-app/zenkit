@@ -12,5 +12,3 @@ export const directionalProp = (property, ...values) => {
     [`${property}${position}`]: valuesWithDefaults[index],
   }));
 };
-
-export default directionalProp;

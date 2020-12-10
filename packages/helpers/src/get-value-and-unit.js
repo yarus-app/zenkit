@@ -6,5 +6,3 @@ export const getValueAndUnit = (value) => {
   if (matchedValue) return [Number.parseFloat(value), matchedValue[2]];
   return [value, undefined];
 };
-
-export default getValueAndUnit;
