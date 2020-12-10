@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.6](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.3.5...@zenkit/box@2.3.6) (2020-12-10)
+
+### Bug Fixes
+
+-   default exports ([d976e1b](https://github.com/yarus-app/zenkit/commit/d976e1b46a84e5f8d23254c3879f35337ebcc656))
+
 ## [2.3.5](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.3.3...@zenkit/box@2.3.5) (2020-12-10)
 
 ### Bug Fixes
