@@ -1,5 +1,3 @@
 import Normalize from './normalize';
 
-export default {
-  Normalize,
-};
+export default Normalize;

@@ -9,7 +9,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
-    "clean:pkgs": "lerna run clean && lerna exec \"rimraf bin build dist lib public node_modules\"",
+    "clean:pkgs": "lerna run clean && lerna exec \"rimraf bin build dist lib public node_modules cjs esm umd\"",
     "clean:lerna": "lerna clean --yes",
     "clean": "run-s clean:**",
     "build": "cross-env NODE_ENV=production lerna exec \"rollup --config=../../scripts/build/rollup.config.js\"",

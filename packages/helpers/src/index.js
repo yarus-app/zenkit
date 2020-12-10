@@ -15,7 +15,7 @@ import spacing from './spacing';
 import switchProp from './switch-prop';
 import theme from './theme';
 import timingFunctions from './timing-functions';
-import withProp from './with-prop';
+import widthProp from './with-prop';
 
 export default {
   between,
@@ -35,5 +35,5 @@ export default {
   switchProp,
   theme,
   timingFunctions,
-  withProp,
+  widthProp,
 };

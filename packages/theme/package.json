@@ -7,6 +7,7 @@
   "bugs": "https://github.com/yarus-app/zenkit/labels/package%3Atheme",
   "license": "MIT",
   "author": "Yaroslav Usenko <usenko.jaroslav@gmail.com> (https://usenko.pp.ua)",
+  "type": "commonjs",
   "main": "lib/zenkit-theme.js",
   "module": "lib/zenkit-theme.mjs",
   "modules.root": "lib",

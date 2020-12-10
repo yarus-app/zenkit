@@ -1,6 +1,6 @@
-import { createGlobalStyle, css } from 'styled-components/macro';
+import { createGlobalStyle } from 'styled-components/macro';
 
-const normalizeStyles = css`
+const Normalize = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -55,8 +55,7 @@ const normalizeStyles = css`
   [hidden] {
     display: none !important;
   }
-`;
 
-const Normalize = createGlobalStyle(normalizeStyles);
+`;
 
 export default Normalize;

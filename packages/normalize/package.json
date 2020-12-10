@@ -7,6 +7,7 @@
   "bugs": "https://github.com/yarus-app/zenkit/labels/package%3Anormalize",
   "license": "MIT",
   "author": "Yaroslav Usenko <usenko.jaroslav@gmail.com> (https://usenko.pp.ua)",
+  "type": "commonjs",
   "main": "lib/zenkit-normalize.js",
   "module": "lib/zenkit-normalize.mjs",
   "modules.root": "lib",

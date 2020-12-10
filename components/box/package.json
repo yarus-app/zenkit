@@ -7,6 +7,7 @@
   "bugs": "https://github.com/yarus-app/zenkit/labels/component%3Abox",
   "license": "MIT",
   "author": "Yaroslav Usenko <usenko.jaroslav@gmail.com> (https://usenko.pp.ua)",
+  "type": "commonjs",
   "main": "lib/zenkit-box.js",
   "module": "lib/zenkit-box.mjs",
   "modules.root": "lib",
