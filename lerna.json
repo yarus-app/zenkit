@@ -5,7 +5,7 @@
   "parallel": true,
   "hoist": true,
   "npmClientArgs": ["--no-package-lock"],
-  "ignoreChanges": ["**/lib/**", "**/fixtures/**", "**/test/**", "**/*.md"],
+  "ignoreChanges": ["**/fixtures/**", "**/test/**", "**/*.md"],
   "command": {
     "version": {
       "allowBranch": "main",
