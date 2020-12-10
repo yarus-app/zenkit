@@ -11,12 +11,14 @@ module.exports = (api) => {
   // const isRollup = caller === 'rollup-plugin-babel';
   const isJest = caller === 'babel-jest';
 
+  const modules = isJest ? 'cjs' : false;
+
   return {
     presets: [
       [
         '@babel/preset-env',
         {
-          modules: isJest ? 'cjs' : false,
+          modules,
           corejs: 3,
           useBuiltIns: 'usage',
           spec: false,
@@ -43,11 +45,11 @@ module.exports = (api) => {
       [
         '@babel/plugin-transform-runtime',
         {
-          absoluteRuntime: false,
           corejs: 3,
           helpers: true,
           regenerator: true,
-          useESModules: !isJest,
+          useESModules: true,
+          absoluteRuntime: false,
         },
       ],
       // Stage 0

@@ -70,11 +70,12 @@ export default async (commandLineArguments) => {
         minifyInternalExports: true,
         externalLiveBindings: true,
         preferConst: true,
+        plugins: [],
       },
       {
         name: PACKAGE_NAME,
         dir: LIB_PATH,
-        format: 'esm',
+        format: 'es',
         entryFileNames: '[name].mjs',
         chunkFileNames: '[name].[hash].mjs',
         assetFileNames: PABLIC_FILE_NAME,
@@ -116,6 +117,10 @@ export default async (commandLineArguments) => {
         babelHelpers: 'runtime',
         exclude: /node_modules/,
         sourceMap: true,
+        minified: true,
+        caller: {
+          sadfsfd: 'asdf',
+        },
       }),
       !isDevelopment &&
         terser({
