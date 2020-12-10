@@ -22,6 +22,7 @@
     "format": "run-s format:**",
     "test": "cross-env NODE_ENV=test jest",
     "coverage": "cross-env NODE_ENV=test jest --coverage",
+    "prepublish": "npm run build",
     "publish": "lerna publish"
   },
   "dependencies": {
@@ -68,6 +69,7 @@
     "babel-plugin-loop-optimizer": "^1.4.1",
     "babel-plugin-macros": "^3.0.0",
     "babel-plugin-react-persist": "^0.2.0",
+    "babel-plugin-rewire-exports": "^2.2.0",
     "babel-plugin-transform-hoist-nested-functions": "^1.2.0",
     "babel-plugin-transform-react-class-to-function": "^1.2.2",
     "babel-preset-minify": "^0.5.1",
@@ -165,11 +167,9 @@
     },
     "rules": {
       "react/prop-types": 0,
-      "unicorn/prevent-abbreviations": 0,
-      "import/prefer-default-export": 0
+      "unicorn/prevent-abbreviations": 0
     }
   },
-  "prettier": {},
   "stylelint": {
     "extends": [
       "stylelint-config-recommended",

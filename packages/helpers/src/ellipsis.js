@@ -1,6 +1,6 @@
-import { spacing } from './spacing';
+import spacing from './spacing';
 
-export const ellipsis = (width, lines = 1) => (props = {}) => {
+const ellipsis = (width, lines = 1) => (props = {}) => {
   const styles = {
     display: 'inline-block',
     maxWidth: spacing(width)(props) || '100%',
@@ -20,3 +20,5 @@ export const ellipsis = (width, lines = 1) => (props = {}) => {
       }
     : styles;
 };
+
+export default ellipsis;

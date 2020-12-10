@@ -1,8 +1,8 @@
 /* eslint-disable import/no-named-as-default */
 
-import { prop } from './prop';
+import prop from './prop';
 
-export const switchProp = (needle, cases, defaultCase) => (properties = {}) => {
+const switchProp = (needle, cases, defaultCase) => (properties = {}) => {
   const value =
     typeof needle === 'function'
       ? needle(properties)
@@ -13,3 +13,5 @@ export const switchProp = (needle, cases, defaultCase) => (properties = {}) => {
   }
   return defaultCase;
 };
+
+export default switchProp;

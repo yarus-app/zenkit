@@ -1,6 +1,6 @@
-import { theme } from './theme';
+import theme from './theme';
 
-export const defaults = {
+const defaults = {
   xxs: 0,
   xs: 320,
   s: 600,
@@ -48,34 +48,36 @@ const getMediaQuery = (min, max) => {
   return `@media ${query}`;
 };
 
-export const up = (key) => (props = {}) => {
+const up = (key) => (props = {}) => {
   const breakpoint = getValue(key)(props);
 
   return getMediaQuery(breakpoint);
 };
 
-export const down = (key) => (props = {}) => {
+const down = (key) => (props = {}) => {
   const breakpoint = getNextValue(key)(props);
 
   return getMediaQuery(undefined, breakpoint);
 };
 
-export const only = (key) => (props = {}) => {
+const only = (key) => (props = {}) => {
   const breakpoint = getNextValue(key)(props);
   const nextbreakpoint = getNextValue(key)(props);
 
   return getMediaQuery(breakpoint, nextbreakpoint);
 };
 
-export const between = (min, max) => (props = {}) => {
+const between = (min, max) => (props = {}) => {
   const minbreakpoint = getNextValue(min)(props);
   const maxbreakpoint = getNextValue(max)(props);
   return getMediaQuery(minbreakpoint, maxbreakpoint);
 };
 
-export const breakpoint = {
+const breakpoint = {
   up,
   down,
   only,
   between,
 };
+
+export default breakpoint;

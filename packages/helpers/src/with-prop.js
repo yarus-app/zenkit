@@ -1,6 +1,6 @@
-import { prop } from './prop';
+import prop from './prop';
 
-export const withProp = (needle, function_) => (properties = {}) => {
+const withProp = (needle, function_) => (properties = {}) => {
   if (Array.isArray(needle)) {
     const needles = needle.map((argument) =>
       withProp(argument, (x) => x)(properties)
@@ -12,3 +12,5 @@ export const withProp = (needle, function_) => (properties = {}) => {
   }
   return function_(prop(needle)(properties));
 };
+
+export default withProp;

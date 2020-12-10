@@ -1,6 +1,6 @@
-import { spacing } from './spacing';
+import spacing from './spacing';
 
-export const cover = (offset = 0) => (props = {}) => {
+const cover = (offset = 0) => (props = {}) => {
   const normilizedOffcet = spacing(offset)(props);
   return {
     position: 'absolute',
@@ -10,3 +10,5 @@ export const cover = (offset = 0) => (props = {}) => {
     left: normilizedOffcet,
   };
 };
+
+export default cover;

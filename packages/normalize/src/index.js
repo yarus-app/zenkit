@@ -1,1 +1,5 @@
-export { Normalize } from './normalize';
+import Normalize from './normalize';
+
+export default {
+  Normalize,
+};

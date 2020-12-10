@@ -1,4 +1,4 @@
-export const hideVisually = () => ({
+const hideVisually = () => ({
   border: '0',
   clip: 'rect(0 0 0 0)',
   height: '1px',
@@ -9,3 +9,5 @@ export const hideVisually = () => ({
   whiteSpace: 'nowrap',
   width: '1px',
 });
+
+export default hideVisually;

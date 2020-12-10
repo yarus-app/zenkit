@@ -1,4 +1,4 @@
-export const breakpoints = {
+const breakpoints = {
   xxs: 0,
   xs: 320,
   s: 600,
@@ -8,7 +8,7 @@ export const breakpoints = {
   xxl: 1920,
 };
 
-export const palette = {
+const palette = {
   common: {
     blue: 'rgb(  0, 122, 255)',
     brown: 'rgb(162, 162, 162)',
@@ -34,7 +34,9 @@ export const palette = {
   },
 };
 
-export const theme = () => ({
+const theme = () => ({
   palette,
   breakpoints,
 });
+
+export default theme;

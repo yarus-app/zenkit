@@ -1,7 +1,7 @@
-import { ZenError } from './utils/error';
-import { getValueAndUnit } from './get-value-and-unit';
+import ZenError from './utils/error';
+import getValueAndUnit from './get-value-and-unit';
 
-export const ratioNames = {
+const ratioNames = {
   minorSecond: 1.067,
   majorSecond: 1.125,
   minorThird: 1.2,
@@ -37,7 +37,7 @@ const getRatio = (ratioName) => {
   throw new ZenError(43);
 };
 
-export const modularScale = (steps, base = '1em', ratio = 'perfectFourth') => {
+const modularScale = (steps, base = '1em', ratio = 'perfectFourth') => {
   if (typeof steps !== 'number') {
     throw new ZenError(42);
   }
@@ -48,3 +48,5 @@ export const modularScale = (steps, base = '1em', ratio = 'perfectFourth') => {
 
   return `${realBase * realRatio ** steps}${unit || ''}`;
 };
+
+export default modularScale;

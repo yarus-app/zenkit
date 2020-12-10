@@ -1,6 +1,6 @@
 const positionMap = ['Top', 'Right', 'Bottom', 'Left'];
 
-export const directionalProp = (property, ...values) => {
+const directionalProp = (property, ...values) => {
   const [
     firstValue,
     secondValue = firstValue,
@@ -12,3 +12,5 @@ export const directionalProp = (property, ...values) => {
     [`${property}${position}`]: valuesWithDefaults[index],
   }));
 };
+
+export default directionalProp;

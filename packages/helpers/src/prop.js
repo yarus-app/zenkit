@@ -1,5 +1,5 @@
 // eslint-disable-next-line unicorn/prevent-abbreviations
-export const prop = (path, defaultValue) => (properties = {}) => {
+const prop = (path, defaultValue) => (properties = {}) => {
   if (typeof properties[path] !== 'undefined') {
     return properties[path];
   }
@@ -22,3 +22,5 @@ export const prop = (path, defaultValue) => (properties = {}) => {
 
   return defaultValue;
 };
+
+export default prop;

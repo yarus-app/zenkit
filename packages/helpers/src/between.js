@@ -1,10 +1,8 @@
-import { ZenError } from './utils/error';
-import { getValueAndUnit } from './get-value-and-unit';
-import { spacing } from './spacing';
+import ZenError from './utils/error';
+import getValueAndUnit from './get-value-and-unit';
+import spacing from './spacing';
 
-export const between = (fromSize, toSize, minScreen, maxScreen) => (
-  props = {}
-) => {
+const between = (fromSize, toSize, minScreen, maxScreen) => (props = {}) => {
   const [unitlessFromSize, fromSizeUnit] = getValueAndUnit(
     spacing(fromSize)(props)
   );
@@ -48,3 +46,5 @@ export const between = (fromSize, toSize, minScreen, maxScreen) => (
     100 * slope
   ).toFixed(2)}vw)`;
 };
+
+export default between;

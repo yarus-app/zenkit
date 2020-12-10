@@ -57,4 +57,6 @@ const normalizeStyles = css`
   }
 `;
 
-export const Normalize = createGlobalStyle(normalizeStyles);
+const Normalize = createGlobalStyle(normalizeStyles);
+
+export default Normalize;

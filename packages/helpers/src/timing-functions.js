@@ -1,6 +1,6 @@
-import { theme } from './theme';
+import theme from './theme';
 
-export const functionsMap = {
+const functionsMap = {
   easeInBack: 'cubic-bezier(0.600, -0.280, 0.735, 0.045)',
   easeInCirc: 'cubic-bezier(0.600,  0.040, 0.980, 0.335)',
   easeInCubic: 'cubic-bezier(0.550,  0.055, 0.675, 0.190)',
@@ -29,5 +29,7 @@ export const functionsMap = {
   easeInOutSine: 'cubic-bezier(0.445,  0.050, 0.550, 0.950)',
 };
 
-export const timingFunctions = (timingFunction) => (props = {}) =>
+const timingFunctions = (timingFunction) => (props = {}) =>
   theme('timing-functions', functionsMap)(props)[timingFunction];
+
+export default timingFunctions;

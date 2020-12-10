@@ -3,7 +3,7 @@
 /* eslint-disable jest/valid-title */
 /* eslint-disable jest/no-export */
 
-import { prop } from './prop';
+import prop from './prop';
 
 const parseFunction = (props, test) => Boolean(test(props));
 
@@ -31,7 +31,7 @@ const parseMap = {
   string: parseString,
 };
 
-export const ifProp = (test, pass, fail = '') => (props = {}) => {
+const ifProp = (test, pass, fail = '') => (props = {}) => {
   let result = true;
 
   if (Array.isArray(test)) {
@@ -48,3 +48,5 @@ export const ifProp = (test, pass, fail = '') => (props = {}) => {
   const value = result ? pass : fail;
   return typeof value === 'function' ? value(props) : value;
 };
+
+export default ifProp;
