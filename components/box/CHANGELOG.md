@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.3](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.3.2...@zenkit/box@2.3.3) (2020-12-10)
+
+### Bug Fixes
+
+-   build system ([629930a](https://github.com/yarus-app/zenkit/commit/629930a08d77a120371526914173c7614b52c4ca))
+
 ## [2.3.2](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.3.1...@zenkit/box@2.3.2) (2020-12-05)
 
 **Note:** Version bump only for package @zenkit/box
