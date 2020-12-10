@@ -48,7 +48,7 @@ module.exports = (api) => {
           corejs: 3,
           helpers: true,
           regenerator: true,
-          useESModules: true,
+          useESModules: false,
           absoluteRuntime: false,
         },
       ],
