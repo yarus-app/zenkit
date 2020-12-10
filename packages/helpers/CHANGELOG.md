@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.7](https://github.com/yarus-app/zenkit/compare/@zenkit/helpers@2.2.6...@zenkit/helpers@2.2.7) (2020-12-10)
+
+### Bug Fixes
+
+-   building ([2a33ca4](https://github.com/yarus-app/zenkit/commit/2a33ca4dab6fa6615122ed33283c7d87117508fa))
+
 ## [2.2.6](https://github.com/yarus-app/zenkit/compare/@zenkit/helpers@2.2.5...@zenkit/helpers@2.2.6) (2020-12-10)
 
 ### Bug Fixes
