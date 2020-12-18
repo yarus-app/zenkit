@@ -127,9 +127,11 @@
       "**/tests/**/*.?(m)js?(x)"
     ],
     "moduleNameMapper": {
-      "@zenkit/(.*)": [
-        "<rootDir>/components/$1/src",
-        "<rootDir>/packages/$1/src"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/test/file-mock.js",
+      "\\.(css|less)$": "<rootDir>/scripts/test/style-mock.js",
+      "^@zenkit/([^/]*)(.*)$": [
+        "<rootDir>/components/$1/src$2",
+        "<rootDir>/packages/$1/src$2"
       ]
     },
     "snapshotSerializers": [
@@ -167,7 +169,8 @@
     },
     "rules": {
       "react/prop-types": 0,
-      "unicorn/prevent-abbreviations": 0
+      "unicorn/prevent-abbreviations": 0,
+      "import/no-unresolved": 0
     }
   },
   "stylelint": {
