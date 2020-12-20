@@ -1,9 +1,10 @@
 module.exports = (api) => {
-  // const env =
-  api.cache(() => process.env.NODE_ENV || 'development');
+  const env = api.env();
 
   const caller =
     api.caller((inst) => (inst && inst.name) || 'any') || '@babel/cli';
+
+  api.cache.invalidate(() => `${env}-${caller}`);
 
   // const isBabelCli = caller === '@babel/cli';
   // const isBabelNode = caller === '@babel/node';
@@ -34,6 +35,7 @@ module.exports = (api) => {
       [
         'babel-preset-minify',
         {
+          builtIns: false,
           keepFnName: false,
           keepClassName: false,
           removeConsole: false,
