@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.3.8...@zenkit/box@2.4.0) (2020-12-30)
+
+### Features
+
+-   chnage babel ([0be42d2](https://github.com/yarus-app/zenkit/commit/0be42d202676270159ca0722497f8fe22b7dc8fa))
+
 ## [2.3.8](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.3.7...@zenkit/box@2.3.8) (2020-12-20)
 
 **Note:** Version bump only for package @zenkit/box

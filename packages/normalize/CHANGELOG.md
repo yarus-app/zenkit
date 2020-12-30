@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/yarus-app/zenkit/compare/@zenkit/normalize@2.1.6...@zenkit/normalize@2.2.0) (2020-12-30)
+
+### Features
+
+-   chnage babel ([0be42d2](https://github.com/yarus-app/zenkit/commit/0be42d202676270159ca0722497f8fe22b7dc8fa))
+
 ## [2.1.6](https://github.com/yarus-app/zenkit/compare/@zenkit/normalize@2.1.5...@zenkit/normalize@2.1.6) (2020-12-10)
 
 ### Bug Fixes
