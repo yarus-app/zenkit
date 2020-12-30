@@ -1,11 +1,14 @@
-import React from 'react';
-import { ThemeProvider as StyledThemeProvider } from 'styled-components/macro';
-import theme from './defaults';
+import React, { useMemo } from 'react';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import merge from 'lodash.merge';
+import getDefaultTheme from './defaults';
 
-const defaultTheme = theme();
+const defaultTheme = getDefaultTheme();
 
-const ThemeProvider = ({ children }) => (
-  <StyledThemeProvider theme={defaultTheme}>{children}</StyledThemeProvider>
-);
+export function ThemeProvider({ theme: localTheme = {}, children }) {
+  const theme = useMemo(() => {
+    return merge(defaultTheme, localTheme);
+  }, [localTheme]);
 
-export default ThemeProvider;
+  return <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>;
+}

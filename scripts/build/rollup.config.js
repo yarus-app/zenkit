@@ -31,9 +31,10 @@ export default async (commandLineArguments) => {
   const { name, dependencies = {}, peerDependencies = {} } = PKG;
 
   const external = [
+    /@babel\/runtime/,
     ...Object.keys(dependencies),
     ...Object.keys(peerDependencies),
-  ].map((e) => new RegExp(e.replace('/', '/')));
+  ].map((e) => new RegExp(e));
 
   const getBanner = ({ extension }) => `
   /** @license ${name}
@@ -58,8 +59,7 @@ export default async (commandLineArguments) => {
         chunkFileNames: '[name].[hash].js',
         assetFileNames: PABLIC_FILE_NAME,
         banner: getBanner({ extension: 'js' }),
-        exports: 'default',
-        interop: 'auto',
+        exports: 'named',
       },
     ],
 

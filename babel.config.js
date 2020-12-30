@@ -4,6 +4,7 @@ module.exports = (api) => {
   const caller =
     api.caller((inst) => (inst && inst.name) || 'any') || '@babel/cli';
 
+  // api.cache.never();
   api.cache.invalidate(() => `${env}-${caller}`);
 
   // const isBabelCli = caller === '@babel/cli';
@@ -50,8 +51,6 @@ module.exports = (api) => {
           corejs: 3,
           helpers: true,
           regenerator: true,
-          useESModules: false,
-          absoluteRuntime: false,
         },
       ],
       // Stage 0

@@ -17,6 +17,27 @@ import theme from './theme';
 import timingFunctions from './timing-functions';
 import widthProp from './with-prop';
 
+export {
+  between,
+  breakpoint,
+  cover,
+  directionalProp,
+  ellipsis,
+  getValueAndUnit,
+  hideText,
+  hideVisually,
+  ifNotProp,
+  ifProp,
+  modularScale,
+  prop,
+  rem,
+  spacing,
+  switchProp,
+  theme,
+  timingFunctions,
+  widthProp,
+};
+
 export default {
   between,
   breakpoint,
