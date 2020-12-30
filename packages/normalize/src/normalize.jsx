@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components/macro';
+import { css, createGlobalStyle } from 'styled-components/macro';
 
-const Normalize = createGlobalStyle`
+export const normalize = css`
   * {
     margin: 0;
     padding: 0;
@@ -9,11 +9,13 @@ const Normalize = createGlobalStyle`
     font-size: 100%;
     text-decoration: none;
     vertical-align: inherit;
+
     background: none;
     background-color: transparent;
     border-color: currentColor;
     border-style: solid;
     border-width: 0;
+
     outline-width: 0;
     outline-style: solid;
     outline-color: currentColor;
@@ -55,7 +57,8 @@ const Normalize = createGlobalStyle`
   [hidden] {
     display: none !important;
   }
-
 `;
+
+export const Normalize = createGlobalStyle(normalize);
 
 export default Normalize;
