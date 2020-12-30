@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.4.0...@zenkit/box@2.5.0) (2020-12-30)
+
+### Features
+
+-   **box:** added api for Box component ([7a843df](https://github.com/yarus-app/zenkit/commit/7a843df45032357620e87a295d42f968bc8d4a27))
+
 # [2.4.0](https://github.com/yarus-app/zenkit/compare/@zenkit/box@2.3.8...@zenkit/box@2.4.0) (2020-12-30)
 
 ### Features
