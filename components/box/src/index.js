@@ -1,3 +1,4 @@
-import Box from './box';
+import { Box } from './box';
 
+export { Box };
 export default Box;
