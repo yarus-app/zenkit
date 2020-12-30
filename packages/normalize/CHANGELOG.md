@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/yarus-app/zenkit/compare/@zenkit/normalize@2.2.0...@zenkit/normalize@2.3.0) (2020-12-30)
+
+### Features
+
+-   add normalize styles and component ([b6191e4](https://github.com/yarus-app/zenkit/commit/b6191e4e7811be14ecc06621fd667d9c14f24752))
+
 # [2.2.0](https://github.com/yarus-app/zenkit/compare/@zenkit/normalize@2.1.6...@zenkit/normalize@2.2.0) (2020-12-30)
 
 ### Features
